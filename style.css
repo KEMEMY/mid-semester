@@ -1,0 +1,241 @@
+
+:root {
+  --bg-dark: #0b1f2a;
+  --bg-mid: #142d3d;
+  --bg-panel: #233746;
+  --bg-panel-alt: #2d3d4c;
+  --orange: #f28c28;
+  --orange-deep: #d96f1f;
+  --gray: #dfe3e7;
+  --gray-soft: #b6bec6;
+  --dark-text: #0d1b22;
+  --white: #f5f7fa;
+  --line: #4b5d6b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-mid) 100%);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  background: rgba(11, 31, 42, 0.96);
+  border-bottom: 1px solid rgba(242, 140, 40, 0.6);
+  padding: 18px 0;
+}
+
+.navbar-brand {
+  color: var(--orange) !important;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  color: var(--gray) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px !important;
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--orange) !important;
+  background: rgba(242, 140, 40, 0.08);
+}
+
+.nav-icon {
+  font-size: 1.1rem;
+}
+
+.hero {
+  padding-top: 110px;
+  padding-bottom: 80px;
+}
+
+.hero h1 {
+  font-size: 2.9rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
+.hero h1 span,
+.section h1 span,
+.section h2 span,
+.purple,
+.accent-text {
+  color: var(--orange) !important;
+}
+
+.hero h3 {
+  margin: 15px 0;
+  color: var(--gray-soft);
+}
+
+.intro {
+  max-width: 650px;
+  margin: 22px auto;
+  color: var(--gray);
+  font-size: 1.05rem;
+}
+
+.btn-purple {
+  background: var(--orange);
+  color: var(--dark-text);
+  border: 1px solid var(--orange);
+  font-weight: 600;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+}
+
+.btn-purple:hover {
+  background: var(--orange-deep);
+  border-color: var(--orange-deep);
+  color: var(--white);
+}
+
+.btn-outline-light {
+  margin: 5px;
+  border-color: var(--gray);
+  color: var(--white);
+}
+
+.section {
+  padding-top: 55px;
+  padding-bottom: 60px;
+}
+
+.section h1, .section h2 {
+  margin-bottom: 20px;
+}
+
+.card-dark {
+  background: rgba(35, 55, 70, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 26px;
+  height: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.card-dark h3,
+.card-dark h4 {
+  color: var(--orange);
+  margin-bottom: 15px;
+}
+
+.card-dark p,
+.card-dark li,
+.card-dark label,
+.card-dark .form-control {
+  color: var(--gray);
+}
+.gallery-card {
+      border: none;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,.08);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .gallery-card:hover { transform: translateY(-6px); box-shadow: 0 12px 28px rgba(0,0,0,.14); }
+    .gallery-card .img-wrap { overflow: hidden; cursor: pointer; }
+    .gallery-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      transition: transform .4s;
+    }
+    .gallery-card:hover img { transform: scale(1.06); }
+    .gallery-card .card-title { font-size: 1.05rem; font-weight: 600; }
+
+.card-dark a {
+  color: var(--orange);
+  overflow-wrap: anywhere;
+}
+
+.card-dark ul {
+  padding-left: 1.2rem;
+}
+
+.card-dark li {
+  margin-bottom: 10px;
+}
+
+.feature-icon,
+.page-icon {
+  font-size: 1.5rem;
+  color: var(--orange);
+  margin-right: 10px;
+}
+
+.form-control {
+  background: #101f2a;
+  color: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.form-control:focus {
+  background: #101f2a;
+  color: var(--white);
+  border-color: var(--orange);
+  box-shadow: 0 0 0 0.2rem rgba(242, 140, 40, 0.18);
+}
+
+form label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+video {
+  border-radius: 10px;
+  margin-top: 12px;
+  border: 1px solid rgba(242, 140, 40, 0.3);
+}
+
+footer {
+  background: rgba(11, 31, 42, 0.96);
+  color: var(--gray-soft);
+  text-align: center;
+  padding: 18px 12px;
+  border-top: 1px solid rgba(242, 140, 40, 0.6);
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .card-dark {
+    padding: 18px;
+  }
+  
